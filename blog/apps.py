@@ -9,7 +9,7 @@ class BlogConfig(AppConfig):
 
 
 
-# Comment from Ustazd
+# Comment from Ustazdd
 # Comment from Shahzodd
 
 

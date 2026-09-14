@@ -113,7 +113,7 @@ jobs:
 
     - name: Safety Check
       run: |
-        pip install safety
+        pip install "safety<3"
         safety check --json
 
     - name: Bandit Security Lint

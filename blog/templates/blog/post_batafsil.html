@@ -1,0 +1,31 @@
+{% extends 'blog/asosiy.html' %}
+
+{% block sarlavha %}{{ post.sarlavha }}{% endblock %}
+
+{% block kontent %}
+    <article class="post-detail">
+        <h1>{{ post.sarlavha }}</h1>
+
+        {% if post.rasm %}
+            <img src="{{ post.rasm.url }}" alt="{{ post.sarlavha }}" class="post-detail-image">
+        {% endif %}
+
+        <div class="post-meta">
+            <p>👤 <strong>Muallif:</strong> {{ post.muallif.username }}</p>
+            <p>📅 <strong>Sana:</strong> {{ post.yaratilgan_sana|date:"d F Y, H:i" }}</p>
+            <p>👁 <strong>Ko'rildi:</strong> {{ post.korildi }} marta</p>
+        </div>
+
+        <div class="post-content">
+            {{ post.matn|linebreaks }}
+        </div>
+
+        <div class="post-actions">
+            {% if user == post.muallif %}
+                <a href="{% url 'post_tahrirlash' post.id %}" class="btn">✏️ Tahrirlash</a>
+                <a href="{% url 'post_ochirish' post.id %}" class="btn btn-danger">🗑️ O'chirish</a>
+            {% endif %}
+            <a href="{% url 'bosh_sahifa' %}" class="btn btn-secondary">⬅ Orqaga</a>
+        </div>
+    </article>
+{% endblock %}

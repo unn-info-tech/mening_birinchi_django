@@ -9,6 +9,7 @@ db.sqlite3
 # Virtual Environment
 venv/
 env/
+.muhit/
 
 # Python
 __pycache__/

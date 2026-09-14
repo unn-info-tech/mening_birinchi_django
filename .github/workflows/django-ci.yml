@@ -112,9 +112,9 @@ jobs:
         python-version: '3.11'
 
     - name: Safety Check
-      run: |
-        pip install safety
-        safety scan
+    run: |
+      pip install "safety<3"
+      safety check --json
 
     - name: Bandit Security Lint
       run: |

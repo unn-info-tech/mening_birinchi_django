@@ -10,7 +10,7 @@ class BlogConfig(AppConfig):
 
 
 # Comment from Ustaz
-# Comment from Shahzod
+# Comment from Shahzodd
 
 
 # comment from Yusufjon
